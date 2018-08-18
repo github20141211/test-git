@@ -5,6 +5,9 @@ import org.springframework.stereotype.Service;
 
 import com.iflywolf.entities.Employee;
 import com.iflywolf.mapper.mappers.EmployeeMapper;
+import tk.mybatis.mapper.entity.Example;
+
+import java.util.List;
 
 @Service
 public class EmployeeService {
@@ -16,6 +19,37 @@ public class EmployeeService {
 		
 		return employeeMapper.selectOne(employeeQueryCondition);
 	}
-	
 
+
+	public Employee getEmployeeById(Integer empId) {
+		return employeeMapper.selectByPrimaryKey(empId);
+	}
+
+	public boolean isExists(Integer empId) {
+		return employeeMapper.existsWithPrimaryKey(empId);
+	}
+
+	public void saveEmployee(Employee employee) {
+		employeeMapper.insert(employee);
+	}
+
+	public void saveEmployeeSelective(Employee employee) {
+		employeeMapper.insertSelective(employee);
+	}
+
+	public void updateEmployeeSelective(Employee employee) {
+		employeeMapper.updateByPrimaryKeySelective(employee);
+	}
+
+	public void removeEmployee(Employee employee) {
+		employeeMapper.delete(employee);
+	}
+
+	public void removeEmployeeById(Integer empId) {
+		employeeMapper.deleteByPrimaryKey(empId);
+	}
+
+	public List<Employee> getEmpListByExample(Example example) {
+		return employeeMapper.selectByExample(example);
+	}
 }

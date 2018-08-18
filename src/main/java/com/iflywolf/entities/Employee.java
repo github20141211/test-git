@@ -1,12 +1,18 @@
 package com.iflywolf.entities;
 
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Table(name="tabple_emp")
 public class Employee {
-	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer empId;
+
+	@Column(name = "emp_name")
 	private String empName;
+
+	@Column(name = "emp_salary")
 	private Double empSalary;
 	private Integer empAge;
 	
