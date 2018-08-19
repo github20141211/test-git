@@ -66,14 +66,11 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.37</version>
 		</dependency>
-	    <!--this is idea local fsfa-->
-	    <!--this is idea local append github code -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>4.3.10.RELEASE</version>
 		</dependency>
-	  <!--this is github code-->
 
 	</dependencies>
 </project>
