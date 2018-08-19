@@ -30,6 +30,11 @@
 	<!-- 通用Mapper使用：tk.mybatis.spring.mapper.MapperScannerConfigurer -->
 	<bean class="tk.mybatis.spring.mapper.MapperScannerConfigurer">
 		<property name="basePackage" value="com.iflywolf.mapper.mappers"/>
+		<property name="properties">
+			<value>
+				mappers=com.iflywolf.mapper.mymappers.MyMapper
+			</value>
+		</property>
 	</bean>
 
 	<!-- 配置Service自动扫描的包 -->

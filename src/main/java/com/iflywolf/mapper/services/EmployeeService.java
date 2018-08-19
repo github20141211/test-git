@@ -52,4 +52,9 @@ public class EmployeeService {
 	public List<Employee> getEmpListByExample(Example example) {
 		return employeeMapper.selectByExample(example);
 	}
+
+    public List<Employee> getAll() {
+		return employeeMapper.selectAll();
+    }
+
 }
