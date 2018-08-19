@@ -66,8 +66,8 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.37</version>
 		</dependency>
-	    <!--this is idea local fsfa-->
-	    <!--this is idea local append github code -->
+	    <!--this is idea local fsfa1-->
+	    <!--this is idea local append github code1 -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
